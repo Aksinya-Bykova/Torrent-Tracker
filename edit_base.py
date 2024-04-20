@@ -8,9 +8,9 @@ import pickledb
 
 db = pickledb.load('data/File-Peers.db', False)
 
-#def exclude_peer(file_name):
+#def exclude_filename(file_name):
     
-def exclude_filename(file_name, peer):
+def exclude_peer(file_name, peer):
     peers = list(db.get(file_name))
     peers.remove(peer)
     db.set(file_name, peers)
