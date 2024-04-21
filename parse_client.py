@@ -63,7 +63,7 @@ def get_response():
         return check_exist_file()
     
     if flag_ready_send_list:
-        if (i <= len(peers_list_answer)):
+        if (i < len(peers_list_answer - 1)):
             i += 1
             return peers_list_answer[i]
         else:
