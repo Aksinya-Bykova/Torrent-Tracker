@@ -15,11 +15,12 @@ flag_answer_exist = False
 flag_get_peers = False
 flag_ready_send_list = False
 
+
 file_name = ""
 peers_list_answer = []
 i = -1
 
-def parse_request(request):
+def parse_request(request, peername):
     global flag_set_file
     global flag_answer_exist
     global flag_get_peers
@@ -28,7 +29,7 @@ def parse_request(request):
     global peers_list_answer
     
     if flag_set_file:
-        parse_set_file(request)
+        parse_set_file(request, peername)
         flag_set_file = False
         
     if flag_answer_exist:

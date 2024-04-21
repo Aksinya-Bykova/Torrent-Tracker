@@ -31,7 +31,7 @@ while True:
     request = client_socket.recv(1024).decode('utf-8').strip()
     print(f"Received request: {request}")
     
-    parse_request(request)
+    parse_request(request, client_address)
     
     # Send response to client
     response = get_response()
