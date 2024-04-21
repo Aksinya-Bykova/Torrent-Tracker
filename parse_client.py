@@ -5,6 +5,7 @@ Created on Sun Apr 21 13:30:49 2024
 """
 
 from monitoring import check_exist_file
+from monitoring import flag_need_exist_file
 from update_list import parse_set_file
 from update_list import flag_set_file
 
@@ -19,4 +20,9 @@ def parse_request(request):
 
 
 def get_response(): #TODO
-    return "Ping"
+    global flag_need_exist_file
+    
+    if flag_need_exist_file:
+        return check_exist_file()
+    
+    return "ping"
