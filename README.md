@@ -54,6 +54,7 @@ file_name
 Ответ трекера со списком файлов
 ```
 GET_PEERS
+file_name
 peer1
 peer2
 ...
