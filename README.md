@@ -32,5 +32,10 @@ file_name
 peer_name
 ```
 
+Запрос трекера на наличие файла у пира
+```
+EXIST_FILE
+file_name
+```
 
 

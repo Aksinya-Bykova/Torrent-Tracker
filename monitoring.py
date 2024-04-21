@@ -8,13 +8,17 @@ import time
 import pickledb
 from edit_base import get_peers
 from edit_base import exclude_peer
+from parse_client import get_response
 
 db = pickledb.load('data/File-Peers.db', False)
 
 db_list = ['A', 'B', 'C']
+current_file_name = ""
 
 def ping(file_name, peer):
-    check_exist = True #TODO request to peer
+    current_file_name = file_name
+    get_response()
+    check_exist = True #TODO response from peer
     if check_exist == False:
         exclude_peer(x, y)
 
