@@ -44,3 +44,17 @@ EXIST_FILE
 file_name
 TRUE/FALSE
 ```
+
+Запрос пира о списке пиров сданным файлом
+```
+GET_PEERS
+file_name
+```
+
+Ответ трекера со списком файлов
+```
+GET_PEERS
+peer1
+peer2
+...
+```
