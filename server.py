@@ -5,6 +5,8 @@ Created on Sat Apr 20 15:28:40 2024
 """
 
 import socket
+from parse_client import get_response
+from update_list import parse_request
 
 # Define the host and port
 HOST = '127.0.0.1'  # Localhost
@@ -28,9 +30,11 @@ while True:
     # Receive request from client
     request = client_socket.recv(1024).decode('utf-8').strip()
     print(f"Received request: {request}")
-
+    
+    parse_request(request)
+    
     # Send response to client
-    response = request.upper()
+    response = get_response()
     client_socket.sendall(response.encode('utf-8'))
 
     # Close the connection
