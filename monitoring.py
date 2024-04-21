@@ -17,6 +17,7 @@ current_file_name = ""
 flag_send_request = False
 flag_send_filename = False
 flag_need_exist_file = False
+check_exist = False
 
 def check_exist_file():
     global flag_send_request
@@ -43,7 +44,7 @@ def ping(file_name, peer):
     flag_need_exist_file = True
     check_exist_file()
     
-    check_exist = True #TODO response from peer
+    global check_exist
     if check_exist == False:
         exclude_peer(x, y)
 
