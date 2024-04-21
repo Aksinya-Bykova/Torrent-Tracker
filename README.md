@@ -38,4 +38,9 @@ EXIST_FILE
 file_name
 ```
 
-
+Ответ пира на наличие файла
+```
+EXIST_FILE
+file_name
+TRUE/FALSE
+```
