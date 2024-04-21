@@ -4,21 +4,19 @@ Created on Sun Apr 21 13:30:49 2024
 @author: xunya
 """
 
-from monitoring import current_file_name
+from monitoring import check_exist_file
+from update_list import parse_set_file
+from update_list import flag_set_file
 
-flag_send_request = False
-flag_send_filename = False
+def parse_request(request):
+    global flag_set_file
+    if flag_set_file:
+        parse_set_file(request)
+        flag_set_file = False
+    
+    if (request == "SET_FILE"):
+        flag_set_file = True
+
 
 def get_response(): #TODO
-    if not flag_send_request:
-        flag_send_request = True
-        flag_send_filename = False
-        return "EXIST_FILE"
-    elif not flag_send_filename:
-        flag_send_request = False
-        flag_send_filename = True
-        return current_file_name
-    
-    flag_send_request = False
-    flag_send_filename = False
     return "Ping"

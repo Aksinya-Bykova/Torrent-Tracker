@@ -6,7 +6,7 @@ Created on Sat Apr 20 15:28:40 2024
 
 import socket
 from parse_client import get_response
-from update_list import parse_request
+from parse_client import parse_request
 
 # Define the host and port
 HOST = '127.0.0.1'  # Localhost
