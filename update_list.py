@@ -23,11 +23,7 @@ def parse_set_file(request, peername):
     else:
         flag_first_arg = False
 
-while True:
-    global flag_set_file
-    global update_file
-    global update_peer
-    
+while True:    
     if flag_set_file:
         set_file(update_file, update_peer)
         flag_set_file = False

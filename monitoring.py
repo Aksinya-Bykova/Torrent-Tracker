@@ -11,8 +11,8 @@ from edit_base import exclude_peer
 
 db = pickledb.load('data/File-Peers.db', False)
 
-db_list = ['A', 'B', 'C']
-current_file_name = ""
+db_list = ['127.0.0.1:8001']
+current_file_name = "file.pdf"
 
 flag_send_request = False
 flag_send_filename = False
